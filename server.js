@@ -20,6 +20,10 @@ mongoose.connect("mongodb://localhost/budget", {
   useFindAndModify: false
 });
 
+app.get("/", function (req, res) {
+  res.json(path.join(__dirname, "public/index.html"));
+});
+
 // routes
 app.use(require("./routes/api.js"));
 

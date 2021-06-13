@@ -27,7 +27,6 @@ app.get("/", function (req, res) {
   res.json(path.join(__dirname, "public/index.html"));
 });
 
-// routes
 app.use(require("./routes/api.js"));
 
 app.listen(PORT, () => {
